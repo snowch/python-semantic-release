@@ -202,7 +202,7 @@ def push_new_version(
     except GitCommandError as error:
         message = str(error)
         if auth_token:
-            message = message.replace(auth_token, auth_token[0:1] + "#[AUTH_TOKEN]#" + authtoken[-1])
+            message = message.replace(auth_token, auth_token[0:1] + "#[AUTH_TOKEN]#" + auth_token[-1])
         raise GitError(message)
 
 
