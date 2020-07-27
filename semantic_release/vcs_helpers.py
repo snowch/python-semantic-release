@@ -197,7 +197,7 @@ def push_new_version(
             )
 
     try:
-        repo.git.push(server, branch)
+        repo.git.push(server, branch, force=True)
         repo.git.push("--tags", server, branch)
     except GitCommandError as error:
         message = str(error)
